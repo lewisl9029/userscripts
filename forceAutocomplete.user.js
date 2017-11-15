@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Force Autocomplete
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/lewisl9029/userscripts
 // @version      0.1
 // @description  Force autocomplete to 'on' to enable password manager autofill
 // @author       Lewis Liu
