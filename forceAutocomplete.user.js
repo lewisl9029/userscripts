@@ -5,6 +5,7 @@
 // @description  Force autocomplete to 'on' to enable password manager autofill
 // @author       Lewis Liu
 // @match        https://sso.trinet.com/*
+// @match        https://online.citi.com/*
 // @grant        none
 // ==/UserScript==
 
