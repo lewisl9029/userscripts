@@ -10,7 +10,7 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+setTimeout(function() {
     'use strict';
     document.querySelectorAll('*[autocomplete="off"]')
       .forEach((node) => {
@@ -31,4 +31,4 @@
       .forEach((node) => {
         node.remove();
       });
-})();
+}, 0);
