@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Force Autocomplete
 // @namespace    https://github.com/lewisl9029/userscripts
-// @version      0.3
+// @version      0.4
 // @description  Force autocomplete to 'on' to enable password manager autofill
 // @author       Lewis Liu
 // @match        https://sso.trinet.com/*
