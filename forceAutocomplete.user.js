@@ -6,6 +6,7 @@
 // @author       Lewis Liu
 // @match        https://sso.trinet.com/*
 // @match        https://online.citi.com/*
+// @match        https://us.hsbc.com/*
 // @grant        none
 // ==/UserScript==
 
