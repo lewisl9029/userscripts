@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Force Autocomplete
 // @namespace    https://github.com/lewisl9029/userscripts
-// @version      0.6
+// @version      0.7
 // @description  Force autocomplete to 'on' to enable password manager autofill
 // @author       Lewis Liu
 // @match        https://sso.trinet.com/*
@@ -9,9 +9,9 @@
 // @match        https://*.us.hsbc.com/*
 // @grant        none
 // ==/UserScript==
-'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
+(function() {
+  'use strict';
   requestIdleCallback(() => {
     console.log('in idle callback');
     
@@ -41,4 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {
     timeout: 20000
   });
-});
+})();
