@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Force Autocomplete
 // @namespace    https://github.com/lewisl9029/userscripts
-// @version      0.5
+// @version      0.6
 // @description  Force autocomplete to 'on' to enable password manager autofill
 // @author       Lewis Liu
 // @match        https://sso.trinet.com/*
@@ -12,8 +12,14 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  getIdleCallback(() => {
-    document.querySelectorAll('*[autocomplete="off"]')
+  requestIdleCallback(() => {
+    console.log('in idle callback');
+    
+    const targetElements = document.querySelectorAll('*[autocomplete="off"]');
+    
+    console.log(targetElements);
+    
+    targetElements
       .forEach((node) => {
         node.removeAttribute('autocomplete');
       });
