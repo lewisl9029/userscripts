@@ -9,26 +9,28 @@
 // @match        https://*.us.hsbc.com/*
 // @grant        none
 // ==/UserScript==
+'use strict';
 
-setTimeout(function() {
-    'use strict';
-    document.querySelectorAll('*[autocomplete="off"]')
-      .forEach((node) => {
-        node.removeAttribute('autocomplete');
-      });
-/*
-    document.querySelectorAll('#IDToken1')
-      .forEach((node) => {
-        node.setAttribute('name', 'username');
-      });
-    document.querySelectorAll('#IDToken2')
-      .forEach((node) => {
-        node.setAttribute('name', 'password');
-      });
-*/
+requestIdleCallback(() => {
+  document.querySelectorAll('*[autocomplete="off"]')
+    .forEach((node) => {
+      node.removeAttribute('autocomplete');
+    });
+  /*
+  document.querySelectorAll('#IDToken1')
+    .forEach((node) => {
+      node.setAttribute('name', 'username');
+    });
+  document.querySelectorAll('#IDToken2')
+    .forEach((node) => {
+      node.setAttribute('name', 'password');
+    });
+  */
 
-    document.querySelectorAll('#passwordDummyForIE, #ssnPwdForIE, #ssnWaterMarkForIE')
-      .forEach((node) => {
-        node.remove();
-      });
-}, 0);
+  document.querySelectorAll('#passwordDummyForIE, #ssnPwdForIE, #ssnWaterMarkForIE')
+    .forEach((node) => {
+      node.remove();
+    });
+}, {
+  timeout: 20000
+});
